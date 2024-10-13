@@ -1,0 +1,35 @@
+<div>
+
+    <form action="" [formGroup]="addMemberForm">
+        <div class="grid-col-2">
+            <label for=""> Enter Name</label>
+            <input  type="text" formControlName="fullName">
+        </div>
+
+        <div class="grid-col-2">
+            <label for="">
+                Enter Mobile Number
+            </label>
+
+            <input type="text" name="" id="" formControlName="mobileNo">
+        </div>
+
+        <div class="grid-col-2">
+            <label for="">Enter Email Address</label>
+            <input type="email" name="" id="" formControlName="emailAddress">
+        </div>
+
+        <div class="grid-col-2">
+            <label for="">Enter Designation</label>
+            <input type="email" name="" id="" formControlName="designation">
+        </div>
+
+        <div class="grid-col-2">
+            <label for="">Enter Enter Department</label>
+            <input type="email" name="" id="" formControlName="department">
+        </div>
+
+        <button type="button" (click)="addMember()">
+            Add Member</button>
+    </form>
+</div>

@@ -1,0 +1,14 @@
+<div class="login-container">
+    <div class="login-box">
+        <h1>Admin Login</h1>
+        <form  [formGroup]="adminForm" >
+            <div class="textbox">
+                <input type="text" placeholder="Username" name="username" formControlName="userName" required>
+            </div>
+            <div class="textbox">
+                <input type="password" placeholder="Password" name="password"  formControlname="password" required>
+            </div>
+            <button type="button" class="btn" (click)="onSubmit()">Login</button>
+        </form>
+    </div>
+</div>
