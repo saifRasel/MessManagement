@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { MessServicesService } from 'src/app/service/mess/mess-services.service';
 
 @Component({
   selector: 'app-add-members',
@@ -8,7 +9,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./add-members.component.css']
 })
 export class AddMembersComponent {
-  constructor(private fb: FormBuilder, private router: Router) {
+
+
+  constructor(private fb: FormBuilder, private router: Router,private service:MessServicesService) {
 
   }
 
@@ -33,7 +36,12 @@ export class AddMembersComponent {
   }
 
   addMember() {
-    this.router.navigate(['/content/test-com']);
+    this.service.saveMember(this.addMemberForm.value).subscribe(res=>{
+    alert(res);
+    });
+    
+  
+
 
   }
 

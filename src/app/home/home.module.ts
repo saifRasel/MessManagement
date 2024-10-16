@@ -8,18 +8,23 @@ import { AddMembersComponent } from './add-members/add-members.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContentModule } from '../content/content.module';
 import { ContentComponent } from '../content/content.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
     DashbordComponent,
-    AddMembersComponent
+    AddMembersComponent,
+    
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
     ReactiveFormsModule,
+    HttpClientModule,
+    
+   
     
     
   ]
